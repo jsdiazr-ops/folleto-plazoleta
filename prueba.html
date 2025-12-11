@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folleto Interactivo - Proyecto Plazoleta de Comidas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #e63946;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section {
+      background: white;
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .section:hover {
+      transform: scale(1.01);
+    }
+    .content {
+      display: none;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .btn {
+      background: #e63946;
+      padding: 10px 15px;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Proyecto de Transformación Digital</h1>
+  <p>Optimización del sistema de pedidos en la plazoleta de comidas</p>
+</header>
+
+<div class="container">
+  <div class="section" onclick="toggle(this)">
+    <h2>🍽️ Introducción</h2>
+    <div class="content">
+      <p>
+        Este folleto presenta la propuesta de investigación centrada en mejorar la experiencia de los usuarios en la plazoleta
+        de comidas del centro comercial de Piedecuesta, mediante el desarrollo de una aplicación unificada que digitalice los
+        procesos de búsqueda, elección y solicitud de pedidos.
+      </p>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggle(this)">
+    <h2>📌 Problemática Actual</h2>
+    <div class="content">
+      <p>
+        Actualmente, los usuarios deben recorrer los restaurantes, revisar menús de forma manual y hacer filas extensas para ordenar.
+        Esto genera congestión, tiempos largos de espera y dificultades para comparar opciones de comida.
+      </p>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggle(this)">
+    <h2>🚀 Propuesta del Proyecto</h2>
+    <div class="content">
+      <p>
+        La solución planteada es una aplicación digital que integre la información de todos los restaurantes de la plazoleta,
+        permitiendo visualizar menús, comparar precios, verificar disponibilidad y realizar pedidos de manera ágil y centralizada.
+      </p>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggle(this)">
+    <h2>📚 Marco Teórico</h2>
+    <div class="content">
+      <p><strong>Transformación Digital:</strong> Integración tecnológica para mejorar procesos y experiencias.</p>
+      <p><strong>Digitalización en Restaurantes:</strong> Uso de herramientas digitales para optimizar la atención.</p>
+      <p><strong>Experiencia del Usuario:</strong> Mejora en percepción, agilidad y satisfacción del comensal.</p>
+      <p><strong>Modelo TAM:</strong> Explica la aceptación tecnológica basada en utilidad y facilidad de uso.</p>
+      <p><strong>Difusión de Innovaciones:</strong> Cómo una nueva solución tecnológica se adopta en una comunidad.</p>
+    </div>
+  </div>
+
+  <!-- Nuevas Secciones Solicitadas -->
+
+  <div class="section" onclick="toggle(this)">
+    <h2>🗄️ Base de Datos</h2>
+    <div class="content">
+      <p>Aquí se presenta la estructura inicial planteada para la base de datos del proyecto.</p>
+      <img src="https://github.com/jsdiazr-ops/folleto-plazoleta/blob/main/BaseDeDatos.png?raw=1" alt="Base de Datos">
+    </div>
+  </div>
+
+  <div class="section" onclick="toggle(this)">
+    <h2>💻 Programación</h2>
+    <div class="content">
+      <p>Este enlace contiene un ejemplo visual desarrollado en p5.js relacionado con el proyecto.</p>
+      <a class="btn" href="https://editor.p5js.org/jsdiazr/full/wWPqjP1A8" target="_blank">Ver Proyecto de Programación</a>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggle(this)">
+    <h2>📂 Estructura de Datos</h2>
+    <div class="content">
+      <p>Representación gráfica de la estructura de datos utilizada en el sistema.</p>
+      <img src="https://github.com/jsdiazr-ops/folleto-plazoleta/blob/main/EstructuraDeDatos.png?raw=1" alt="Estructura de Datos">
+    </div>
+  </div>
+
+  <!-- Encuesta -->
+  <div class="section" onclick="toggle(this)">
+    <h2>📝 Encuesta</h2>
+    <div class="content">
+      <p>
+        Con el fin de comprender mejor las necesidades de los usuarios, se aplicará la siguiente encuesta:
+      </p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc0p_a0hsb0UsYo8mMNSHAeNUYDNYB8u7pZfHAapbPMugoXBg/viewform?usp=header" target="_blank">Responder Encuesta</a>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <div class="section" onclick="toggle(this)">
+    <h2>📞 Contacto</h2>
+    <div class="content">
+      <p>Si deseas comunicarte con el equipo, puedes escribirnos al correo:</p>
+      <a class="btn" href="mailto:jsdiazr@unincca.edu.co">Enviar mensaje</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggle(section) {
+    const content = section.querySelector('.content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
+
